@@ -128,19 +128,24 @@ export default function Home() {
       <div className={`bg-slate-950 flex flex-col shadow-2xl z-30 flex-shrink-0 text-white transition-all duration-300 ease-in-out overflow-hidden ${isSidebarOpen ? 'w-80' : 'w-0 opacity-0'}`}>
         <div className="w-80 h-full flex flex-col">
             
-            {/* LOGO & TITLE */}
+            {/* LOGO & TITLE (VERSI FINE-TUNED: NAIK DIKIT & MUNDUR DIKIT) */}
             <div className="px-6 py-5 border-b border-slate-800 flex items-center relative overflow-hidden">
+               
+               {/* 1. NAIKIN LOGO: Tambah -mt-2 biar keangkat dikit */}
                <img 
                    src="/japfa-logo.png" 
                    alt="Logo" 
-                   className="h-14 w-auto object-contain drop-shadow-2xl relative z-20" 
+                   // h-16 tetap, z-20 tetap
+                   className="h-16 w-auto -mt-3 object-contain drop-shadow-2xl relative z-20" 
                    onError={(e) => e.currentTarget.style.display = 'none'} 
                />
-               <div className="flex flex-col justify-center -ml-10 relative z-10 pt-1">
+               
+               {/* 2. MUNDURIN DIKIT: Ubah dari -ml-14 jadi -ml-11 biar ga terlalu nubruk */}
+               <div className="flex flex-col justify-center -ml-12 relative z-10 pt-1">
                   <h1 className="text-4xl font-black italic tracking-tighter text-blue-500 leading-none pl-1" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>
                     TMS<span className="text-white">JAPFA</span>
                   </h1>
-                  <p className="text-[10px] text-slate-500 mt-0.5 uppercase tracking-widest pl-2 font-bold">Enterprise Command</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5 uppercase tracking-widest pl-2 font-bold">SO FRESH JAPFA FOOD CIKUPA</p>
                </div>
             </div>
 
